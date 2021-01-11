@@ -36,6 +36,12 @@ function mkabspath ()
     ABS=${ABS/\/.\//\/}
 }
 
+if [[ ${1:0:2} == '-1' ]]
+then
+    EXITPARAM=1
+    shift
+fi
+
 HASH=${1}
 DIR=${2:-.} # если не задана директория используем текущий каталог
 
@@ -56,6 +62,14 @@ do
     then
         mkabspath "$fn"
         echo "Совпадение c $ABS"
+
+        if [[ $EXITPARAM == 1 ]]
+        then
+            break
+        fi
+
+    else
+        echo "Не совпадает с $fn"
     fi
 done
 
