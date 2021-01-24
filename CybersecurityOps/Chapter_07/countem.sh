@@ -7,6 +7,7 @@
 #
 # Использование:
 # countem.sh < inputfile
+# cut -d ' ' -f1 access.log | /bin/bash countem.sh
 #
 declare -A cnt  # ассоциативный массив
 

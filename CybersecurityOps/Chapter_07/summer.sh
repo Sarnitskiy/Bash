@@ -8,6 +8,7 @@
 #
 # Использование:
 # summer.sh < inputfile
+# cut -d ' ' -f1,10 access.log | bash summer.sh
 #
 declare -A cnt  # ассоциативный массив
 
