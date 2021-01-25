@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #
 # countem.sh
 #
@@ -7,7 +7,7 @@
 #
 # Использование:
 # countem.sh < inputfile
-# cut -d ' ' -f1 access.log | /bin/bash countem.sh
+# cut -d ' ' -f1 access.log | bash countem.sh
 #
 declare -A cnt  # ассоциативный массив
 
