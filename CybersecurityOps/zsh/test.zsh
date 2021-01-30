@@ -1,4 +1,6 @@
 #!/bin/zsh
+set -x
+declare -A cnt
 
 while read id xtra
 do
@@ -7,3 +9,4 @@ do
     let "cnt[$id]++"
     echo $cnt[$id]
 done
+set +x
